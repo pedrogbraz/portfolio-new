@@ -160,7 +160,7 @@ export default function Home() {
               <div>
                 <div className="w-[320px] h-[204px] rounded-[8px]">
                   <Image
-                    src="/capa.png"
+                    src="/preview-fsw.png"
                     alt={`Logo de FSW Foods`}
                     width={320}
                     height={204}
@@ -205,8 +205,8 @@ export default function Home() {
               <div>
                 <div className="w-[320px] h-[204px] rounded-[8px]">
                   <Image
-                    src="/capa02.png"
-                    alt={`Logo de FSW Foods`}
+                    src="/preview-hamburgueria.png"
+                    alt={`Logo de Hamburgueria`}
                     width={320}
                     height={204}
                     className="max-h-[204px] object-cover rounded-[8px]"
@@ -252,8 +252,8 @@ export default function Home() {
               <div>
                 <div className="w-[320px] h-[204px] rounded-[8px]">
                   <Image
-                    src="/capa03.png"
-                    alt={`Logo de FSW Foods`}
+                    src="/preview-nlw.png"
+                    alt={`Logo de NLW`}
                     width={320}
                     height={204}
                     className="rounded-[8px]"
