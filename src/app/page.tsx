@@ -24,7 +24,7 @@ export default function Home() {
       <div>
         <Header />
         <div className="flex flex-col gap-36 mb-10">
-          <div className="px-16 mt-40 space-y-6 md:mt-32 md:px-32 md:flex md:gap-32 md:items-center md:justify-between">
+          <div className="px-8 mt-40 space-y-6 md:mt-32 md:px-32 md:flex md:gap-32 md:items-center md:justify-between">
             <div className=" md:w-[530px]">
               <div className="space-y-2">
                 <span className="text-[--color-theme]">Olá, meu nome é</span>
@@ -98,7 +98,7 @@ export default function Home() {
               id="foto"
             />
           </div>
-          <div className="px-16 space-y-14">
+          <div className="px-8 space-y-14">
             <div className="space-y-3">
               <span className="text-[--color-theme]">../lingaguens</span>
               <h2 className="text-3xl text-[--color-white] font-medium">
@@ -148,7 +148,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="px-16">
+          <div className="px-8">
             <div className="space-y-3 mb-5">
               <span className="text-[--color-theme]">../destaques</span>
               <h2 className="text-3xl text-[--color-white] font-medium">
@@ -297,7 +297,7 @@ export default function Home() {
               <p className="text-[--textColor]">Se interessou?</p>
               <Link
                 className="flex items-center gap-2 text-[--color-white]"
-                href="https://nlw-unite-reactjs-pedrogbraz.vercel.app/"
+                href="https://github.com/pedrogbraz"
                 target="_blank"
               >
                 <span className="font-medium">Ver todos</span>
@@ -305,7 +305,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="px-16 space-y-14">
+          <div className="px-8 space-y-14">
             <div className="flex flex-col justify-center items-center space-y-3">
               <span className="text-[--color-theme]">../contato</span>
               <h2 className="text-3xl text-[--color-white] font-medium">
@@ -314,7 +314,7 @@ export default function Home() {
               <Contacts />
             </div>
           </div>
-          <p className="text-[--textColor] text-sm px-16 text-center">
+          <p className="text-[--textColor] text-sm px-8 text-center">
             © 2024
             <Link className="hover:text-white duration-300" href="https://github.com/pedrogbraz">
               <span> Pedro Gontijo Braz</span>

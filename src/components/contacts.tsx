@@ -17,7 +17,7 @@ const Contacts = () => {
         className="w-full rounded-[8px] px-3 py-2 h-32 bg-white/10 outline-none text-[--color-white] resize-none"
         placeholder="Digite a mensagem"
       ></textarea>
-      <div className="px-12">
+      <div className="px-12 pt-3">
         <input
           className="bg-[--color-theme] p-2 rounded-[8px] w-full text-white"
           type="submit"
