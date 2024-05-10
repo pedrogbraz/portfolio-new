@@ -2,7 +2,7 @@ import { MoveRight } from "lucide-react";
 
 const Contacts = () => {
   return (
-    <div className="w-full px-3 space-y-3">
+    <div className="w-full px-3 pt-8 space-y-3">
       <input
         className="w-full rounded-[8px] px-3 py-2 bg-white/10 text-[--color-white] outline-none"
         placeholder="Digite seu nome"
