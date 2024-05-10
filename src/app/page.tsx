@@ -307,7 +307,7 @@ export default function Home() {
           </div>
           <div className="px-16 space-y-14">
             <div className="flex flex-col justify-center items-center space-y-3">
-              <span className="text-[--color-theme]">../experiências</span>
+              <span className="text-[--color-theme]">../contato</span>
               <h2 className="text-3xl text-[--color-white] font-medium">
                 Quer falar comigo?
               </h2>
