@@ -29,3 +29,7 @@
 body {
   background-color: var(--power__black);
 }
+
+#foto {
+  display: none;
+}
