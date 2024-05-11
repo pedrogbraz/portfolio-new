@@ -16,19 +16,19 @@ import {
 import { FaReact } from "react-icons/fa";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
-import Contacts from "@/components/contacts";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <div>
         <Header />
         <div className="flex flex-col gap-36 mb-10">
-          <div className="px-8 mt-40 space-y-6 md:mt-32 md:px-32 md:flex md:gap-32 md:items-center md:justify-between">
-            <div className=" md:w-[530px]">
+          <div className="px-16 mt-32 space-y-6 md:space-y-0 md:px-32 md:flex md:gap-32 md:items-center md:justify-between">
+            <div className="md:w-[530px]">
               <div className="space-y-2">
                 <span className="text-[--color-theme]">Olá, meu nome é</span>
-                <h1 className="text-3xl text-[--color-white]">
+                <h1 className="text-2xl md:text-3xl text-[--color-white]">
                   Pedro Gontijo Braz
                 </h1>
               </div>
@@ -64,24 +64,30 @@ export default function Home() {
               </div>
 
               <div className="flex items-center gap-4 pt-8">
-                <Button className="px-6 py-6 bg-[--color-theme] rounded-[8px] text-[--color-white]">
+                <Button className="px-6 py-6 bg-transparent hover:bg-[--color-theme] rounded-[8px] text-[--color-white]">
                   <div className="flex items-center gap-3">
                     <span>Entre em contato</span>
                     <MoveRight className="size-5" />
                   </div>
                 </Button>
                 <div className="flex gap-3 text-[--textColor]">
-                  <Link href="https://github.com/pedrogbraz" target="_blank">
+                  <Link
+                    href="https://github.com/pedrogbraz"
+                    className="hover:text-[--color-white] duration-300 hover:scale-[1.02]"
+                    target="_blank"
+                  >
                     <GitHubLogoIcon className="size-6" />
                   </Link>
                   <Link
                     href="https://www.linkedin.com/in/pedro-gontijo-braz-7b6014268/"
+                    className="hover:text-[--color-white] duration-300 hover:scale-[1.02]"
                     target="_blank"
                   >
                     <Linkedin className="size-6" />
                   </Link>
                   <Link
                     href="https://www.instagram.com/pedr0_br4z/"
+                    className="hover:text-[--color-white] duration-300 hover:scale-[1.02]"
                     target="_blank"
                   >
                     <InstagramLogoIcon className="size-6" />
@@ -89,240 +95,253 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <Image
-              src="/perfil.png"
-              alt=""
-              width={500}
-              height={500}
-              className="max-h-[500px] rounded-xl"
-              id="foto"
-            />
-          </div>
-          <div className="px-8 space-y-14">
-            <div className="space-y-3">
-              <span className="text-[--color-theme]">../lingaguens</span>
-              <h2 className="text-3xl text-[--color-white] font-medium">
-                Conhecimentos
-              </h2>
-            </div>
-            <div className="grid grid-cols-2 gap-2">
-              <Languages
-                name="HTML5"
-                icon={<IoLogoHtml5 />}
-                time="1 ano de experiência"
-              />
-              <Languages
-                name="CSS3"
-                icon={<TbBrandCss3 size={20} />}
-                time="1 ano de experiência"
-              />
-              <Languages
-                name="JavaScript"
-                icon={<IoLogoJavascript />}
-                time="8 meses de experiência"
-              />
-              <Languages
-                name="TypeScript"
-                icon={<BiLogoTypescript size={18} />}
-                time="5 meses de experiência"
-              />
-              <Languages
-                name="React"
-                icon={<FaReact size={18} />}
-                time="2 meses de experiência"
-              />
-              <Languages
-                name="Tailwindcss"
-                icon={<BiLogoTailwindCss size={22} />}
-                time="2 meses de experiência"
-              />
-              <Languages
-                name="Nodejs"
-                icon={<IoLogoNodejs size={22} />}
-                time="2 meses de experiência"
-              />
-              <Languages
-                name="Postgres"
-                icon={<BiLogoPostgresql size={22} />}
-                time="1 semana de experiência"
+            <div>
+              <Image
+                src="/foto.jpg"
+                alt=""
+                width={500}
+                height={500}
+                className="rounded-xl max-h-[500px] object-cover"
+                id="foto"
               />
             </div>
           </div>
-          <div className="px-8">
-            <div className="space-y-3 mb-5">
-              <span className="text-[--color-theme]">../destaques</span>
-              <h2 className="text-3xl text-[--color-white] font-medium">
-                Projeto em destaque
-              </h2>
-            </div>
-            <Separator className="h-[1px] bg-white/10 mb-10" />
-            <div className="flex flex-col gap-8 items-center">
-              <div>
-                <div className="w-[320px] h-[204px] rounded-[8px]">
-                  <Image
-                    src="/preview-fsw.png"
-                    alt={`Logo de FSW Foods`}
-                    width={320}
-                    height={204}
-                    className="rounded-[8px]"
+          <div className="w-full bg-[--nightBlack] pb-16 md:mx-8 md:rounded-2xl">
+            <div className="px-16 space-y-14 py-16 md:px-[80px]">
+              <div className="space-y-3">
+                <span className="text-[--color-theme]">../lingaguens</span>
+                <h2 className="text-2xl md:text-3xl text-[--color-white] font-medium">
+                  Conhecimentos
+                </h2>
+              </div>
+              <div className="md:w-[1350px]">
+                <div className="grid grid-cols-2 gap-2 md:grid-cols-5">
+                  <Languages
+                    name="HTML5"
+                    icon={<IoLogoHtml5 />}
+                    time="1 ano de experiência"
+                  />
+                  <Languages
+                    name="CSS3"
+                    icon={<TbBrandCss3 size={20} />}
+                    time="1 ano de experiência"
+                  />
+                  <Languages
+                    name="JavaScript"
+                    icon={<IoLogoJavascript />}
+                    time="8 meses de experiência"
+                  />
+                  <Languages
+                    name="TypeScript"
+                    icon={<BiLogoTypescript size={18} />}
+                    time="5 meses de experiência"
+                  />
+                  <Languages
+                    name="React"
+                    icon={<FaReact size={18} />}
+                    time="2 meses de experiência"
+                  />
+                  <Languages
+                    name="Tailwindcss"
+                    icon={<BiLogoTailwindCss size={22} />}
+                    time="2 meses de experiência"
+                  />
+                  <Languages
+                    name="Nodejs"
+                    icon={<IoLogoNodejs size={22} />}
+                    time="2 meses de experiência"
+                  />
+                  <Languages
+                    name="Postgres"
+                    icon={<BiLogoPostgresql size={22} />}
+                    time="1 semana de experiência"
+                  />
+                  <Languages
+                    name="Postgres"
+                    icon={<BiLogoPostgresql size={22} />}
+                    time="1 semana de experiência"
+                  />
+                  <Languages
+                    name="Postgres"
+                    icon={<BiLogoPostgresql size={22} />}
+                    time="1 semana de experiência"
                   />
                 </div>
               </div>
-              <div className="space-y-4">
-                <h2 className="text-[--color-white]">FSW Foods</h2>
-                <p className="text-sm text-[--textColor]">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
-                  officia tenetur quaerat veritatis, commodi, voluptates aliquam
-                  dolores ipsam.
-                </p>
-                <div className="space-y-1.5">
-                  <div className="flex gap-1.5 text-sm">
-                    <Badges text="React" />
-                    <Badges text="Nextjs" />
-                    <Badges text="Tailwind" />
-                    <Badges text="Postgres" />
-                  </div>
-                  <div className="flex gap-1.5 text-sm">
-                    <Badges text="Prisma" />
-                    <Badges text="NeonDB" />
-                    <Badges text="NextAuth" />
-                  </div>
-                </div>
-                <div>
-                  <Link
-                    className="flex pt-2 items-center gap-3 text-[--color-white]"
-                    href="https://fullstackweek-foods-drab.vercel.app/"
-                    target="_blank"
-                  >
-                    <span className="font-medium">Ver projeto</span>
-                    <MoveRight className="size-5" />
-                  </Link>
-                </div>
-              </div>
             </div>
-            <Separator className="h-[1px] bg-white/10 mt-10  mb-10" />
-            <div className="flex flex-col gap-8 items-center">
-              <div>
-                <div className="w-[320px] h-[204px] rounded-[8px]">
-                  <Image
-                    src="/preview-hamburgueria.png"
-                    alt={`Logo de Hamburgueria`}
-                    width={320}
-                    height={204}
-                    className="max-h-[204px] object-cover rounded-[8px]"
-                  />
+            <div className="px-16 md:px-32">
+              <div className="space-y-3 mb-5">
+                <span className="text-[--color-theme]">../destaques</span>
+                <h2 className="text-2xl md:text-3xl text-[--color-white] font-medium">
+                  Projetos em destaques
+                </h2>
+              </div>
+              <Separator className="h-[1px] bg-white/10 mb-10" />
+              <div className="flex flex-col gap-8 items-center md:flex-row">
+                <div>
+                  <div className="w-[320px] h-[204px] rounded-[8px]">
+                    <Image
+                      src="/preview-fsw.png"
+                      alt={`Logo de FSW Foods`}
+                      width={320}
+                      height={204}
+                      className="rounded-[8px]"
+                    />
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <h2 className="text-[--color-white]">FSW Foods</h2>
+                  <p className="text-sm text-[--textColor]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Sed officia tenetur quaerat veritatis, commodi, voluptates
+                    aliquam dolores ipsam.
+                  </p>
+                  <div className="space-y-1.5">
+                    <div className="flex gap-1.5 text-sm">
+                      <Badges text="React" />
+                      <Badges text="Nextjs" />
+                      <Badges text="Tailwind" />
+                      <Badges text="Postgres" />
+                    </div>
+                    <div className="flex gap-1.5 text-sm">
+                      <Badges text="Prisma" />
+                      <Badges text="NeonDB" />
+                      <Badges text="NextAuth" />
+                    </div>
+                  </div>
+                  <div>
+                    <Link
+                      className="inline-flex pt-2 items-center gap-3 text-[--color-white] hover:scale-[1.02] duration-300"
+                      href="https://fullstackweek-foods-drab.vercel.app/"
+                      target="_blank"
+                    >
+                      <span className="font-medium">Ver projeto</span>
+                      <MoveRight className="size-5" />
+                    </Link>
+                  </div>
                 </div>
               </div>
-              <div className="space-y-4">
-                <h2 className="text-[--color-white]">Site de Hamburgueria</h2>
-                <p className="text-sm text-[--textColor]">
-                  Site para Hamburgueria que desenvolvi do zero usando HTML,
-                  CSS, Tailwindcss e JavaScript Desenvolvi esse site conforme
-                  uma Aula de Tailwindcss que fiz para me aprimorar em
-                  Tailwindcss pois até então eu não possuia tanta Habilidade.
-                </p>
-                <div className="space-y-1.5">
-                  <div className="flex gap-1.5 text-sm">
-                    <Badges text="React" />
-                    <Badges text="Nextjs" />
-                    <Badges text="Tailwind" />
-                    <Badges text="Postgres" />
-                  </div>
-                  <div className="flex gap-1.5 text-sm">
-                    <Badges text="Prisma" />
-                    <Badges text="NeonDB" />
-                    <Badges text="NextAuth" />
+              <Separator className="h-[1px] bg-white/10 mt-10  mb-10" />
+              <div className="flex flex-col gap-8 items-center md:flex-row">
+                <div>
+                  <div className="w-[320px] h-[204px] rounded-[8px]">
+                    <Image
+                      src="/preview-hamburgueria.png"
+                      alt={`Logo de Hamburgueria`}
+                      width={320}
+                      height={204}
+                      className="max-h-[204px] object-cover rounded-[8px]"
+                    />
                   </div>
                 </div>
-                <div>
-                  <Link
-                    className="flex pt-2 items-center gap-3 text-[--color-white]"
-                    href="https://site-hamburgueria-pedrogbraz.vercel.app/
+                <div className="space-y-4">
+                  <h2 className="text-[--color-white]">Site de Hamburgueria</h2>
+                  <p className="text-sm text-[--textColor]">
+                    Site para Hamburgueria que desenvolvi do zero usando HTML,
+                    CSS, Tailwindcss e JavaScript Desenvolvi esse site conforme
+                    uma Aula de Tailwindcss que fiz para me aprimorar em
+                    Tailwindcss pois até então eu não possuia tanta Habilidade.
+                  </p>
+                  <div className="space-y-1.5">
+                    <div className="flex gap-1.5 text-sm">
+                      <Badges text="React" />
+                      <Badges text="Nextjs" />
+                      <Badges text="Tailwind" />
+                      <Badges text="Postgres" />
+                    </div>
+                    <div className="flex gap-1.5 text-sm">
+                      <Badges text="Prisma" />
+                      <Badges text="NeonDB" />
+                      <Badges text="NextAuth" />
+                    </div>
+                  </div>
+                  <div>
+                    <Link
+                      className="inline-flex pt-2 items-center gap-3 text-[--color-white] hover:scale-[1.02] duration-300"
+                      href="https://site-hamburgueria-pedrogbraz.vercel.app/
                     "
-                    target="_blank"
-                  >
-                    <span className="font-medium">Ver projeto</span>
-                    <MoveRight className="size-5" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <Separator className="h-[1px] bg-white/10 mt-10  mb-10" />
-            <div className="flex flex-col gap-8 items-center">
-              <div>
-                <div className="w-[320px] h-[204px] rounded-[8px]">
-                  <Image
-                    src="/preview-nlw.png"
-                    alt={`Logo de NLW`}
-                    width={320}
-                    height={204}
-                    className="rounded-[8px]"
-                  />
-                </div>
-              </div>
-              <div className="space-y-4">
-                <h2 className="text-[--color-white]">NLW Unite</h2>
-                <p className="text-sm text-[--textColor]">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
-                  officia tenetur quaerat veritatis, commodi, voluptates aliquam
-                  dolores ipsam.
-                </p>
-                <div className="space-y-1.5">
-                  <div className="flex gap-1.5 text-sm">
-                    <Badges text="React" />
-                    <Badges text="Nextjs" />
-                    <Badges text="Tailwind" />
-                    <Badges text="Postgres" />
-                  </div>
-                  <div className="flex gap-1.5 text-sm">
-                    <Badges text="Prisma" />
-                    <Badges text="NeonDB" />
-                    <Badges text="NextAuth" />
+                      target="_blank"
+                    >
+                      <span className="font-medium">Ver projeto</span>
+                      <MoveRight className="size-5" />
+                    </Link>
                   </div>
                 </div>
-                <div>
-                  <Link
-                    className="flex pt-2 items-center gap-3 text-[--color-white]"
-                    href="https://nlw-unite-reactjs-pedrogbraz.vercel.app/"
-                    target="_blank"
-                  >
-                    <span className="font-medium">Ver projeto</span>
-                    <MoveRight className="size-5" />
-                  </Link>
-                </div>
+              </div>
+              <Separator className="h-[1px] bg-white/10 mt-10  mb-10" />
+              <div className="flex gap-2">
+                <p className="text-[--textColor]">Se interessou?</p>
+                <Link
+                  className="flex items-center gap-2 text-[--color-white] hover:scale-[1.02] duration-300"
+                  href="https://github.com/pedrogbraz?tab=repositories"
+                  target="_blank"
+                >
+                  <span className="font-medium">Ver todos</span>
+                  <MoveRight className="size-5" />
+                </Link>
               </div>
             </div>
-            <Separator className="h-[1px] bg-white/10 mt-10  mb-10" />
-            <div className="flex gap-2">
-              <p className="text-[--textColor]">Se interessou?</p>
-              <Link
-                className="flex items-center gap-2 text-[--color-white]"
-                href="https://github.com/pedrogbraz"
-                target="_blank"
-              >
-                <span className="font-medium">Ver todos</span>
-                <MoveRight className="size-5" />
-              </Link>
+          </div>
+          <div className="flex justify-center px-16 md:px-32">
+            <div className="w-[40%] space-y-32 ">
+              <Image
+                src="/iphone.png"
+                alt=""
+                width={200}
+                height={200}
+                className="rounded-xl object-cover -rotate-[7deg] hover:-rotate-[15deg] duration-300 opacity-20"
+                id="foto"
+              />
+              <Image
+                src="/mouse.png"
+                alt=""
+                width={200}
+                height={200}
+                className="rounded-xl object-cover -rotate-[7deg] hover:-rotate-0 duration-300 ml-[35%] opacity-20"
+                id="foto"
+              />
+            </div>
+            <div className="space-y-14 ">
+              <div className="flex flex-col justify-center items-center space-y-3 w-[100%]">
+                <span className="text-[--color-theme]">../contato</span>
+                <h2 className="text-2xl md:text-3xl text-[--color-white] font-medium">
+                  Quer falar comigo?
+                </h2>
+                <Footer />
+              </div>
+            </div>
+            <div className="w-[40%] space-y-36 mt-44 ">
+              <Image
+                src="/macbookr.png"
+                alt=""
+                width={200}
+                height={200}
+                className="rounded-xl object-cover -rotate-[7deg] hover:-rotate-0 duration-300 ml-[40%] opacity-20"
+                id="foto"
+              />
+              <Image
+                src="/keyboardr.png"
+                alt=""
+                width={200}
+                height={200}
+                className="rounded-xl object-cover -rotate-[7deg] hover:rotate-0 duration-300 opacity-20"
+                id="foto"
+              />
             </div>
           </div>
-          <div className="px-8 space-y-14">
-            <div className="flex flex-col justify-center items-center space-y-3">
-              <span className="text-[--color-theme]">../contato</span>
-              <h2 className="text-3xl text-[--color-white] font-medium">
-                Quer falar comigo?
-              </h2>
-              <Contacts />
-            </div>
-          </div>
-          <p className="text-[--textColor] text-sm px-8 text-center">
+          <p className="text-[--textColor] text-sm px-8 text-center md:px-32">
             © 2024
-            <Link className="hover:text-white duration-300" href="https://github.com/pedrogbraz">
+            <Link
+              className="hover:text-white duration-300"
+              href="https://github.com/pedrogbraz"
+              target="_blank"
+            >
               <span> Pedro Gontijo Braz</span>
             </Link>{" "}
-            - All Rights Reserved. Elevating your digital experience.
+            - Todos os direitos reservados. Elevando sua experiência digital.
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
