@@ -106,7 +106,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="w-full bg-[--nightBlack] pb-16 md:mx-8 md:rounded-2xl">
+          <div className="bg-[--nightBlack] pb-16 md:mx-8 md:rounded-2xl">
             <div className="px-16 space-y-14 py-16 md:px-[80px]">
               <div className="space-y-3">
                 <span className="text-[--color-theme]">../lingaguens</span>
