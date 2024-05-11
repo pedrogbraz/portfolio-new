@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="">
+    <div>
       <div className="flex justify-end p-5 text-[--color-white]">
         <Sheet>
           <SheetTrigger>
