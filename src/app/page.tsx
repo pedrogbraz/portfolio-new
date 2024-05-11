@@ -180,63 +180,65 @@ const Home = () => {
                 </p>
               </div>
               <div>
-                <div className="flex justify-center bg-[--metalBlack] rounded-[8px] p-3 gap-3">
-                  <Image
-                    src="/html5.svg"
-                    alt=""
-                    width={30}
-                    height={30}
-                    className="object-cover hover:-translate-y-1 duration-300"
-                  />
-                  <Image
-                    src="/css3.svg"
-                    alt=""
-                    width={30}
-                    height={30}
-                    className="object-cover hover:-translate-y-1 duration-300"
-                  />
-                  <Image
-                    src="/js.svg"
-                    alt=""
-                    width={30}
-                    height={30}
-                    className="object-cover hover:-translate-y-1 duration-300"
-                  />
-                  <Image
-                    src="/tailwind.svg"
-                    alt=""
-                    width={30}
-                    height={30}
-                    className="object-cover hover:-translate-y-1 duration-300"
-                  />
-                  <Image
-                    src="/react.svg"
-                    alt=""
-                    width={30}
-                    height={30}
-                    className="object-cover hover:-translate-y-1 duration-300"
-                  />
-                  <Image
-                    src="/nextjs.svg"
-                    alt=""
-                    width={30}
-                    height={30}
-                    className="object-cover hover:-translate-y-1 duration-300"
-                  />
-                  <Image
-                    src="/typescript.svg"
-                    alt=""
-                    width={30}
-                    height={30}
-                    className="object-cover hover:-translate-y-1 duration-300"
-                  />
-                  <Image
-                    src="/nodejs.svg"
-                    alt=""
-                    width={30}
-                    height={30}
-                    className="object-cover hover:-translate-y-1 duration-300"
-                  />
+                <div className="flex items-center bg-[--metalBlack] rounded-[8px] p-2">
+                  <div className="flex gap-[10px]">
+                    <Image
+                      src="/html5.svg"
+                      alt=""
+                      width={30}
+                      height={30}
+                      className="object-cover hover:-translate-y-1 duration-300"
+                    />
+                    <Image
+                      src="/css3.svg"
+                      alt=""
+                      width={30}
+                      height={30}
+                      className="object-cover hover:-translate-y-1 duration-300"
+                    />
+                    <Image
+                      src="/js.svg"
+                      alt=""
+                      width={30}
+                      height={30}
+                      className="object-cover hover:-translate-y-1 duration-300"
+                    />
+                    <Image
+                      src="/tailwind.svg"
+                      alt=""
+                      width={30}
+                      height={30}
+                      className="object-cover hover:-translate-y-1 duration-300"
+                    />
+                    <Image
+                      src="/react.svg"
+                      alt=""
+                      width={30}
+                      height={30}
+                      className="object-cover hover:-translate-y-1 duration-300"
+                    />
+                    <Image
+                      src="/nextjs.svg"
+                      alt=""
+                      width={30}
+                      height={30}
+                      className="object-cover hover:-translate-y-1 duration-300"
+                    />
+                    <Image
+                      src="/typescript.svg"
+                      alt=""
+                      width={30}
+                      height={30}
+                      className="object-cover hover:-translate-y-1 duration-300"
+                    />
+                    <Image
+                      src="/nodejs.svg"
+                      alt=""
+                      width={30}
+                      height={30}
+                      className="object-cover hover:-translate-y-1 duration-300"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
