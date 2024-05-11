@@ -1,347 +1,216 @@
-import Badges from "@/components/badges";
 import Header from "@/components/header";
-import Languages from "@/components/languages";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-
-import { Linkedin, MoveRight } from "lucide-react";
-import { GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
-import { TbBrandCss3 } from "react-icons/tb";
-import { IoLogoJavascript, IoLogoHtml5, IoLogoNodejs } from "react-icons/io";
-import {
-  BiLogoTypescript,
-  BiLogoTailwindCss,
-  BiLogoPostgresql,
-} from "react-icons/bi";
-import { FaReact } from "react-icons/fa";
-import Image from "next/image";
+import Sociais from "@/components/sociais";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
-import Footer from "@/components/footer";
+import Image from "next/image";
 
-export default function Home() {
+import { IoLogoInstagram, IoCheckmarkDone } from "react-icons/io5";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import Link from "next/link";
+import { LuSend } from "react-icons/lu";
+
+const Home = () => {
   return (
-    <div>
-      <div>
-        <Header />
-        <div className="flex flex-col gap-36 mb-10">
-          <div className="px-16 mt-32 space-y-6 md:space-y-0 md:px-32 md:flex md:gap-32 md:items-center md:justify-between">
-            <div className="md:w-[530px]">
-              <div className="space-y-2">
-                <span className="text-[--color-theme]">Olá, meu nome é</span>
-                <h1 className="text-2xl md:text-3xl text-[--color-white]">
-                  Pedro Gontijo Braz
-                </h1>
-              </div>
-              <p className="text-[--textColor] pb-6">
-                Olá, meu nome é Pedro Gontijo Braz e sou um{" "}
-                <strong className="text-[--color-white] font-medium">
-                  Desenvolvedor Front-End
-                </strong>
-                , que pretende se tornar um Desenvolvedor Full-Stacks, sou
-                apaixonado por tecnologia. Com mais de{" "}
-                <strong className="text-[--color-white] font-medium">
-                  1 ano de experiência
-                </strong>
-                . Meu foco é criar interfaces de usuário bonitas, modernas,
-                interativa e funcional.{" "}
-                <strong className="text-[--color-white] font-medium">
-                  Estou sempre aberto a novas oportunidades e desafios que me
-                  façam crescer na minha carreira.
-                </strong>
-              </p>
-              <div className="space-y-3">
-                <div className="flex gap-2">
-                  <Badges text="HTML" />
-                  <Badges text="CSS" />
-                  <Badges text="JavaScript" />
-                  <Badges text="TypeScript" />
-                </div>
-                <div className="flex gap-2">
-                  <Badges text="Tailwind" />
-                  <Badges text="React" />
-                  <Badges text="Nextjs" />
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 pt-8">
-                <Button className="px-6 py-6 bg-transparent hover:bg-[--color-theme] rounded-[8px] text-[--color-white]">
-                  <div className="flex items-center gap-3">
-                    <span>Entre em contato</span>
-                    <MoveRight className="size-5" />
-                  </div>
-                </Button>
-                <div className="flex gap-3 text-[--textColor]">
-                  <Link
-                    href="https://github.com/pedrogbraz"
-                    className="hover:text-[--color-white] duration-300 hover:scale-[1.02]"
-                    target="_blank"
-                  >
-                    <GitHubLogoIcon className="size-6" />
-                  </Link>
-                  <Link
-                    href="https://www.linkedin.com/in/pedro-gontijo-braz-7b6014268/"
-                    className="hover:text-[--color-white] duration-300 hover:scale-[1.02]"
-                    target="_blank"
-                  >
-                    <Linkedin className="size-6" />
-                  </Link>
-                  <Link
-                    href="https://www.instagram.com/pedr0_br4z/"
-                    className="hover:text-[--color-white] duration-300 hover:scale-[1.02]"
-                    target="_blank"
-                  >
-                    <InstagramLogoIcon className="size-6" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div>
+    <div className="p-6 space-y-6">
+      <Header />
+      <div className="w-full bg-[--nightBlack] rounded-2xl p-5 space-y-6">
+        <div className="flex flex-col items-center space-y-5">
+          <Avatar className="size-32 border-8 border-[--metalBlack]">
+            <AvatarFallback>
               <Image
                 src="/foto.jpg"
                 alt=""
-                width={500}
-                height={500}
-                className="rounded-xl max-h-[500px] object-cover"
-                id="foto"
+                fill
+                className="object-cover w-40 h-40"
               />
-            </div>
+            </AvatarFallback>
+          </Avatar>
+          <h1 className="text-lg font-semibold text-[--color-white]">
+            Pedro Gontijo Braz
+          </h1>
+          <Separator className="bg-[--metalBlack] h-[1px]" />
+        </div>
+        <div className="flex justify-between px-6">
+          <div className="text-[--color-white] font-semibold">
+            <h2>País:</h2>
+            <h2>Cidade:</h2>
+            <h2>Idade:</h2>
           </div>
-          <div className="bg-[--nightBlack] pb-16 md:mx-8 md:rounded-2xl">
-            <div className="px-16 space-y-14 py-16 md:px-[80px]">
-              <div className="space-y-3">
-                <span className="text-[--color-theme]">../lingaguens</span>
-                <h2 className="text-2xl md:text-3xl text-[--color-white] font-medium">
-                  Conhecimentos
-                </h2>
-              </div>
-              <div className="md:w-[1350px]">
-                <div className="grid grid-cols-2 gap-2 md:grid-cols-5">
-                  <Languages
-                    name="HTML5"
-                    icon={<IoLogoHtml5 />}
-                    time="1 ano de experiência"
-                  />
-                  <Languages
-                    name="CSS3"
-                    icon={<TbBrandCss3 size={20} />}
-                    time="1 ano de experiência"
-                  />
-                  <Languages
-                    name="JavaScript"
-                    icon={<IoLogoJavascript />}
-                    time="8 meses de experiência"
-                  />
-                  <Languages
-                    name="TypeScript"
-                    icon={<BiLogoTypescript size={18} />}
-                    time="5 meses de experiência"
-                  />
-                  <Languages
-                    name="React"
-                    icon={<FaReact size={18} />}
-                    time="2 meses de experiência"
-                  />
-                  <Languages
-                    name="Tailwindcss"
-                    icon={<BiLogoTailwindCss size={22} />}
-                    time="2 meses de experiência"
-                  />
-                  <Languages
-                    name="Nodejs"
-                    icon={<IoLogoNodejs size={22} />}
-                    time="2 meses de experiência"
-                  />
-                  <Languages
-                    name="Postgres"
-                    icon={<BiLogoPostgresql size={22} />}
-                    time="1 semana de experiência"
-                  />
-                  <Languages
-                    name="Postgres"
-                    icon={<BiLogoPostgresql size={22} />}
-                    time="1 semana de experiência"
-                  />
-                  <Languages
-                    name="Postgres"
-                    icon={<BiLogoPostgresql size={22} />}
-                    time="1 semana de experiência"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="px-16 md:px-32">
-              <div className="space-y-3 mb-5">
-                <span className="text-[--color-theme]">../destaques</span>
-                <h2 className="text-2xl md:text-3xl text-[--color-white] font-medium">
-                  Projetos em destaques
-                </h2>
-              </div>
-              <Separator className="h-[1px] bg-white/10 mb-10" />
-              <div className="flex flex-col gap-8 items-center md:flex-row">
-                <div>
-                  <div className="w-[320px] h-[204px] rounded-[8px]">
-                    <Image
-                      src="/preview-fsw.png"
-                      alt={`Logo de FSW Foods`}
-                      width={320}
-                      height={204}
-                      className="rounded-[8px]"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <h2 className="text-[--color-white]">FSW Foods</h2>
-                  <p className="text-sm text-[--textColor]">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Sed officia tenetur quaerat veritatis, commodi, voluptates
-                    aliquam dolores ipsam.
-                  </p>
-                  <div className="space-y-1.5">
-                    <div className="flex gap-1.5 text-sm">
-                      <Badges text="React" />
-                      <Badges text="Nextjs" />
-                      <Badges text="Tailwind" />
-                      <Badges text="Postgres" />
-                    </div>
-                    <div className="flex gap-1.5 text-sm">
-                      <Badges text="Prisma" />
-                      <Badges text="NeonDB" />
-                      <Badges text="NextAuth" />
-                    </div>
-                  </div>
-                  <div>
-                    <Link
-                      className="inline-flex pt-2 items-center gap-3 text-[--color-white] hover:scale-[1.02] duration-300"
-                      href="https://fullstackweek-foods-drab.vercel.app/"
-                      target="_blank"
-                    >
-                      <span className="font-medium">Ver projeto</span>
-                      <MoveRight className="size-5" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <Separator className="h-[1px] bg-white/10 mt-10  mb-10" />
-              <div className="flex flex-col gap-8 items-center md:flex-row">
-                <div>
-                  <div className="w-[320px] h-[204px] rounded-[8px]">
-                    <Image
-                      src="/preview-hamburgueria.png"
-                      alt={`Logo de Hamburgueria`}
-                      width={320}
-                      height={204}
-                      className="max-h-[204px] object-cover rounded-[8px]"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <h2 className="text-[--color-white]">Site de Hamburgueria</h2>
-                  <p className="text-sm text-[--textColor]">
-                    Site para Hamburgueria que desenvolvi do zero usando HTML,
-                    CSS, Tailwindcss e JavaScript Desenvolvi esse site conforme
-                    uma Aula de Tailwindcss que fiz para me aprimorar em
-                    Tailwindcss pois até então eu não possuia tanta Habilidade.
-                  </p>
-                  <div className="space-y-1.5">
-                    <div className="flex gap-1.5 text-sm">
-                      <Badges text="React" />
-                      <Badges text="Nextjs" />
-                      <Badges text="Tailwind" />
-                      <Badges text="Postgres" />
-                    </div>
-                    <div className="flex gap-1.5 text-sm">
-                      <Badges text="Prisma" />
-                      <Badges text="NeonDB" />
-                      <Badges text="NextAuth" />
-                    </div>
-                  </div>
-                  <div>
-                    <Link
-                      className="inline-flex pt-2 items-center gap-3 text-[--color-white] hover:scale-[1.02] duration-300"
-                      href="https://site-hamburgueria-pedrogbraz.vercel.app/
-                    "
-                      target="_blank"
-                    >
-                      <span className="font-medium">Ver projeto</span>
-                      <MoveRight className="size-5" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <Separator className="h-[1px] bg-white/10 mt-10  mb-10" />
-              <div className="flex gap-2">
-                <p className="text-[--textColor]">Se interessou?</p>
-                <Link
-                  className="flex items-center gap-2 text-[--color-white] hover:scale-[1.02] duration-300"
-                  href="https://github.com/pedrogbraz?tab=repositories"
-                  target="_blank"
-                >
-                  <span className="font-medium">Ver todos</span>
-                  <MoveRight className="size-5" />
-                </Link>
-              </div>
-            </div>
+          <div className="flex flex-col items-end text-[--textColor]">
+            <p>Brasil</p>
+            <p>São Paulo</p>
+            <p>16 anos</p>
           </div>
-          <div className="flex justify-center px-16 md:px-32">
-            <div className="w-[40%] space-y-32 ">
-              <Image
-                src="/iphone.png"
-                alt=""
-                width={200}
-                height={200}
-                className="rounded-xl object-cover -rotate-[7deg] hover:-rotate-[15deg] duration-300 opacity-20"
-                id="foto"
-              />
-              <Image
-                src="/mouse.png"
-                alt=""
-                width={200}
-                height={200}
-                className="rounded-xl object-cover -rotate-[7deg] hover:-rotate-0 duration-300 ml-[35%] opacity-20"
-                id="foto"
-              />
-            </div>
-            <div className="space-y-14 ">
-              <div className="flex flex-col justify-center items-center space-y-3 w-[100%]">
-                <span className="text-[--color-theme]">../contato</span>
-                <h2 className="text-2xl md:text-3xl text-[--color-white] font-medium">
-                  Quer falar comigo?
-                </h2>
-                <Footer />
-              </div>
-            </div>
-            <div className="w-[40%] space-y-36 mt-44 ">
-              <Image
-                src="/macbookr.png"
-                alt=""
-                width={200}
-                height={200}
-                className="rounded-xl object-cover -rotate-[7deg] hover:-rotate-0 duration-300 ml-[40%] opacity-20"
-                id="foto"
-              />
-              <Image
-                src="/keyboardr.png"
-                alt=""
-                width={200}
-                height={200}
-                className="rounded-xl object-cover -rotate-[7deg] hover:rotate-0 duration-300 opacity-20"
-                id="foto"
-              />
-            </div>
+        </div>
+        <div className="px-4 py-3 bg-[--metalBlack] rounded-[8px]">
+          <h1 className="text-[--color-white] font-semibold">Redes Sociais:</h1>
+          <div className="flex gap-6 justify-center pt-5 pb-3">
+            <Sociais
+              logo={<IoLogoInstagram />}
+              name="Instagram"
+              link="https://www.instagram.com/pedr0_br4z/"
+            />
+            <Sociais
+              logo={<FaGithub />}
+              name="Github"
+              link="https://github.com/pedrogbraz"
+            />
+            <Sociais
+              logo={<FaLinkedinIn />}
+              name="Linkedin"
+              link="https://www.linkedin.com/in/pedro-gontijo-braz-7b6014268/"
+            />
           </div>
-          <p className="text-[--textColor] text-sm px-8 text-center md:px-32">
-            © 2024
-            <Link
-              className="hover:text-white duration-300"
-              href="https://github.com/pedrogbraz"
-              target="_blank"
-            >
-              <span> Pedro Gontijo Braz</span>
-            </Link>{" "}
-            - Todos os direitos reservados. Elevando sua experiência digital.
+        </div>
+      </div>
+
+      <div className="flex flex-col w-full bg-[--nightBlack] rounded-2xl p-5 gap-8">
+        <div className="flex flex-col gap-4">
+          <h1 className="text-[--color-white] font-semibold text-2xl flex flex-col">
+            Specialist{" "}
+            <span className="text-[--color-theme]">Web Development</span>
+          </h1>
+          <p className="text-[--textColor]">
+            As a{" "}
+            <span className="text-[--color-white] font-medium">
+              Front End Developer
+            </span>
+            , my technical expertise stands out in crafting innovative solutions
+            designed to exceed expectations and drive the success of each
+            project.
           </p>
+          <div className="flex gap-4">
+            <div className="flex gap-1 items-center text-[--textColor]">
+              <IoCheckmarkDone size={18} className="text-green-400" />
+              <span className="text-sm">CLT/PJ/Freelancer</span>
+            </div>
+            <div className="flex gap-1 items-center text-[--textColor]">
+              <IoCheckmarkDone size={18} className="text-green-400" />
+              <span className="text-sm">Disponível para projetos</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <Link
+            href="/"
+            className="flex gap-2 max-w-[182px] items-center py-2 px-3 text-[--color-white] bg-[--color-theme] rounded-[8px]"
+          >
+            <LuSend />
+            Entrar em Contato
+          </Link>
+        </div>
+      </div>
+
+      <div className="flex flex-col w-full bg-[--nightBlack] rounded-2xl p-5 gap-8">
+        <div className="flex flex-col gap-4">
+          <h1 className="text-[--color-white] font-semibold text-2xl">
+            Sobre <span className="text-[--color-theme]">Mim</span>
+          </h1>
+          <p className="flex flex-col text-[--textColor] gap-4">
+            <span>
+              Sou Pedro Gontijo Braz, um apaixonado por tecnologia,
+              especialmente focado no{" "}
+              <span className="text-[--color-white] font-medium">
+                Desenvolvimento Front End
+              </span>
+              , onde busco constantemente criar soluções digitais inovadoras.
+              Atualmente, estou aprimorando meu conhecimento através do{" "}
+              <span className="text-[--color-white] font-medium">
+                Programa de Certificado Profissional em Ciência da Computação
+              </span>{" "}
+              na <span>Harvard University</span>, reconhecido por meu
+              envolvimento ativo em atividades e grupos, incluindo o renomado{" "}
+              <span>HarvardX CS50s.</span>
+            </span>
+            <span>
+              Estou sempre em busca de expandir minhas habilidades em{" "}
+              <span className="text-[--color-white] font-medium">
+                Java, JavaSpring, Angular, Docker e .NET
+              </span>
+              , e tenho uma{" "}
+              <span className="text-[--color-white] font-medium">
+                paixão inabalável por enfrentar desafios complexos.
+              </span>{" "}
+              Estou preparado para oferecer contribuições significativas,
+              trazendo uma variedade de habilidades e uma valiosa experiência
+              para qualquer ambiente profissional.
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div className="flex flex-col w-full bg-[--nightBlack] rounded-2xl p-5 gap-8">
+        <div className="flex flex-col gap-2">
+          <h1 className="text-[--color-white] font-semibold text-2xl">
+            Minhas <span className="text-[--color-theme]">Skills</span>
+          </h1>
+          <p className="text-[--textColor]">
+            Abaixo, você verá todas as minhas softs e hards skills.
+          </p>
+        </div>
+        <div className="flex flex-col gap-2">
+          <div className="flex justify-center bg-[--metalBlack] rounded-[8px] p-3 gap-3">
+            <Image
+              src="/html5.svg"
+              alt=""
+              width={30}
+              height={30}
+              className="object-cover hover:-translate-y-1 duration-300"
+            />
+            <Image
+              src="/css3.svg"
+              alt=""
+              width={30}
+              height={30}
+              className="object-cover hover:-translate-y-1 duration-300"
+            />
+            <Image
+              src="/js.svg"
+              alt=""
+              width={30}
+              height={30}
+              className="object-cover hover:-translate-y-1 duration-300"
+            />
+            <Image
+              src="/tailwind.svg"
+              alt=""
+              width={30}
+              height={30}
+              className="object-cover hover:-translate-y-1 duration-300"
+            />
+            <Image
+              src="/react.svg"
+              alt=""
+              width={30}
+              height={30}
+              className="object-cover hover:-translate-y-1 duration-300"
+            />
+            <Image
+              src="/nextjs.svg"
+              alt=""
+              width={30}
+              height={30}
+              className="object-cover hover:-translate-y-1 duration-300"
+            />
+            <Image
+              src="/typescript.svg"
+              alt=""
+              width={30}
+              height={30}
+              className="object-cover hover:-translate-y-1 duration-300"
+            />
+            <Image
+              src="/nodejs.svg"
+              alt=""
+              width={30}
+              height={30}
+              className="object-cover hover:-translate-y-1 duration-300"
+            />
+          </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Home;

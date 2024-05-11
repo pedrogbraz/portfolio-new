@@ -1,33 +1,31 @@
-"use client";
-
-import Link from "next/link";
-import Image from "next/image";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { MenuIcon } from "lucide-react";
 
 const Header = () => {
   return (
-    <div className="flex items-center justify-between px-8 md:px-32 text-[--textColor] py-8">
-      <div>
-        <Link href="/">
-          <Image src="/Logo.png" alt="Logo" width={84} height={32} />
-        </Link>
-      </div>
-      <div className="flex gap-10">
-        <Link href="/">
-          <div className="flex gap-2 items-center">
-            <span className="text-lg text-[--color-theme]">#</span>
-            <span className="duration-300 hover:text-[--color-white]">
-              Início
-            </span>
-          </div>
-        </Link>
-        <Link href="/">
-          <div className="flex gap-2 items-center">
-            <span className="text-lg text-[--color-theme]">#</span>
-            <span className="duration-300 hover:text-[--color-white]">
-              Projetos
-            </span>
-          </div>
-        </Link>
+    <div className="">
+      <div className="flex justify-end p-5 text-[--color-white]">
+        <Sheet>
+          <SheetTrigger>
+            <MenuIcon />
+          </SheetTrigger>
+          <SheetContent>
+            <SheetHeader>
+              <SheetTitle>Are you absolutely sure?</SheetTitle>
+              <SheetDescription>
+                This action cannot be undone. This will permanently delete your
+                account and remove your data from our servers.
+              </SheetDescription>
+            </SheetHeader>
+          </SheetContent>
+        </Sheet>
       </div>
     </div>
   );
