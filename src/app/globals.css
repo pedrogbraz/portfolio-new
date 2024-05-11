@@ -33,5 +33,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  
+  #languagens {
+    display: none;
+  }
 }

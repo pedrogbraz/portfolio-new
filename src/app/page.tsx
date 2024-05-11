@@ -81,11 +81,11 @@ const Home = () => {
             </div>
             <div className="flex flex-col">
               <div className="flex flex-col gap-6">
-                <h1 className="text-[--color-white] font-semibold text-2xl flex flex-col">
+                <h1 className="text-[--color-white] font-semibold text-3xl flex flex-col">
                   Desenvolvedor{" "}
                   <span className="text-[--color-theme]">Front End</span>
                 </h1>
-                <p className="text-[--textColor] max-w-[380px]">
+                <p className="text-[--textColor] max-w-[380px] md:max-w-[640px]">
                   Como um Desenvolvedor{" "}
                   <span className="text-[--color-white] font-medium">
                     Front End
@@ -141,9 +141,9 @@ const Home = () => {
                       Programa de Certificado Profissional em Ciência da
                       Computação
                     </span>{" "}
-                    na <span>Harvard University</span>, reconhecido por meu
+                    na <span className="text-[--color-white] font-medium">Harvard University</span>, reconhecido por meu
                     envolvimento ativo em atividades e grupos, incluindo o
-                    renomado <span>HarvardX CS50s.</span>
+                    renomado <span className="text-[--color-white] font-medium">HarvardX CS50s.</span>
                   </span>
                   <span>
                     Estou sempre em busca de expandir minhas habilidades em{" "}
@@ -179,64 +179,96 @@ const Home = () => {
                   Abaixo, você verá todas as minhas softs e hards skills.
                 </p>
               </div>
-              <div>
-                <div className="flex items-center bg-[--metalBlack] rounded-[8px] p-2">
+              <div className="md:flex md:justify-center md:gap-6">
+                <div className="flex items-center bg-[--metalBlack] rounded-[8px] p-2 md:p-5 md:max-w-[550px]">
                   <div className="flex gap-[10px]">
                     <Image
                       src="/html5.svg"
-                      alt=""
+                      alt="Logo da Linguagem"
                       width={30}
                       height={30}
-                      className="object-cover hover:-translate-y-1 duration-300"
+                      className="md:size-10 object-cover hover:-translate-y-1 duration-300"
                     />
                     <Image
                       src="/css3.svg"
-                      alt=""
+                      alt="Logo da Linguagem"
                       width={30}
                       height={30}
-                      className="object-cover hover:-translate-y-1 duration-300"
+                      className="md:size-10 object-cover hover:-translate-y-1 duration-300"
                     />
                     <Image
                       src="/js.svg"
-                      alt=""
+                      alt="Logo da Linguagem"
                       width={30}
                       height={30}
-                      className="object-cover hover:-translate-y-1 duration-300"
+                      className="md:size-10 object-cover hover:-translate-y-1 duration-300"
                     />
                     <Image
                       src="/tailwind.svg"
-                      alt=""
+                      alt="Logo da Linguagem"
                       width={30}
                       height={30}
-                      className="object-cover hover:-translate-y-1 duration-300"
+                      className="md:size-10 object-cover hover:-translate-y-1 duration-300"
                     />
                     <Image
                       src="/react.svg"
-                      alt=""
+                      alt="Logo da Linguagem"
                       width={30}
                       height={30}
-                      className="object-cover hover:-translate-y-1 duration-300"
+                      className="md:size-10 object-cover hover:-translate-y-1 duration-300"
                     />
                     <Image
                       src="/nextjs.svg"
-                      alt=""
+                      alt="Logo da Linguagem"
                       width={30}
                       height={30}
-                      className="object-cover hover:-translate-y-1 duration-300"
+                      className="md:size-10 object-cover hover:-translate-y-1 duration-300"
                     />
                     <Image
                       src="/typescript.svg"
-                      alt=""
+                      alt="Logo da Linguagem"
                       width={30}
                       height={30}
-                      className="object-cover hover:-translate-y-1 duration-300"
+                      className="md:size-10 object-cover hover:-translate-y-1 duration-300"
                     />
                     <Image
                       src="/nodejs.svg"
-                      alt=""
+                      alt="Logo da Linguagem"
                       width={30}
                       height={30}
-                      className="object-cover hover:-translate-y-1 duration-300"
+                      className="md:size-10 object-cover hover:-translate-y-1 duration-300"
+                    />
+                  </div>
+                </div>
+                <div className="flex items-center bg-[--metalBlack] rounded-[8px] p-2 md:p-5 md:max-w-[550px]" id="languagens">
+                  <div className="flex gap-[10px]">
+                    <Image
+                      src="/java.svg"
+                      alt="Logo da Linguagem"
+                      width={30}
+                      height={30}
+                      className="size-10 object-cover hover:-translate-y-1 duration-300"
+                    />
+                    <Image
+                      src="/spring.svg"
+                      alt="Logo da Linguagem"
+                      width={30}
+                      height={30}
+                      className="size-10 object-cover hover:-translate-y-1 duration-300"
+                    />
+                    <Image
+                      src="/python.svg"
+                      alt="Logo da Linguagem"
+                      width={30}
+                      height={30}
+                      className="size-10 object-cover hover:-translate-y-1 duration-300"
+                    />
+                    <Image
+                      src="/sass.svg"
+                      alt="Logo da Linguagem"
+                      width={30}
+                      height={30}
+                      className="size-10 object-cover hover:-translate-y-1 duration-300"
                     />
                   </div>
                 </div>
@@ -252,31 +284,31 @@ const Home = () => {
             </div>
             <div className="flex flex-col space-y-10">
               <div className="flex flex-col gap-6">
-                <h1 className="text-[--textColor]">
+                <h1 className="text-[--textColor] text-center">
                   Abaixo, você pode entrar em contato comigo via e-mail.
                 </h1>
 
-                <div className="flex flex-col gap-2 px-12">
+                <div className="flex flex-col gap-3 md:px-12 text-xs text-[--color-white]">
                   <input
                     type="text"
                     placeholder="Digite seu nome"
-                    className="bg-[--metalBlack] rounded-[8px] p-2"
+                    className="bg-[--metalBlack] rounded-full px-4 py-3 outline-none"
                   />
                   <input
                     type="text"
                     placeholder="Digite seu email"
-                    className="bg-[--metalBlack] rounded-[8px] p-2"
+                    className="bg-[--metalBlack] rounded-full px-4 py-3 outline-none"
                   />
                   <input
                     type="text"
                     placeholder="Escreva o contexto"
-                    className="bg-[--metalBlack] rounded-[8px] p-2"
+                    className="bg-[--metalBlack] rounded-full px-4 py-3 outline-none"
                   />
                   <textarea
-                    className="bg-[--metalBlack] resize-none rounded-[8px] p-2 h-32"
+                    className="bg-[--metalBlack] resize-none rounded-[8px] p-2 h-32 outline-none"
                     placeholder="Digite o assunto"
                   />
-                  <button className="bg-[--color-theme] text-[--color-white] rounded-[8px] p-2 mx-12">
+                  <button className="bg-[--color-theme] text-[--color-white] rounded-full px-4 py-3">
                     Enviar
                   </button>
                 </div>
@@ -286,7 +318,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="text-[--textColor] text-center mx-2 md:mx-0">
+      <div className="text-[--textColor] text-center mx-16 md:mx-0">
         © 2024 Pedro Gontijo Braz - Todos os direitos reservados. Elevando sua
         experiência digital.
       </div>
