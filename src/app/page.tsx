@@ -15,8 +15,8 @@ const Home = () => {
   return (
     <div className="p-0 space-y-6 md:space-y-0">
       <Header />
-      <div className="flex">
-        <div className="w-[25%] mx-7 md:w-auto md:fixed md:left-0 md:0">
+      <div className="px-6 gap-6 flex flex-col items-center md:p-0">
+        <div className="w-full mx-4 md:w-auto md:fixed md:left-0 md:0">
           <div className="w-full bg-[--nightBlack] rounded-2xl p-5 space-y-6">
             <div className="flex flex-col items-center space-y-5">
               <Avatar className="size-32 border-8 border-[--metalBlack]">
@@ -71,7 +71,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="w-[75%] md:w-[99%] md:pl-[25%]">
+        <div className="flex flex-col md:w-[100%] md:pl-[25%] gap-6 md:mr-4">
           <div className="w-full bg-[--nightBlack] rounded-2xl p-5 space-y-4">
             <div className="inline-flex border border-white/10 rounded-full px-4 py-[6px]">
               <span className="flex items-center gap-1 text-[--color-white] text-xs">
@@ -284,7 +284,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="text-[--textColor] text-center">
+      <div className="text-[--textColor] text-center mx-2 md:mx-0">
         © 2024 Pedro Gontijo Braz - Todos os direitos reservados. Elevando sua
         experiência digital.
       </div>
