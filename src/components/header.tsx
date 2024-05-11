@@ -7,6 +7,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { MenuIcon } from "lucide-react";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -16,14 +17,21 @@ const Header = () => {
           <SheetTrigger>
             <MenuIcon />
           </SheetTrigger>
-          <SheetContent>
-            <SheetHeader>
-              <SheetTitle>Are you absolutely sure?</SheetTitle>
-              <SheetDescription>
-                This action cannot be undone. This will permanently delete your
-                account and remove your data from our servers.
-              </SheetDescription>
-            </SheetHeader>
+          <SheetContent className="bg-[--power__black] border-none text-white space-y-2">
+            <div className="flex flex-col gap-2">
+              <Link
+                href="/"
+                className="inline-flex items-center gap-2 text-[--color-white] hover:text-[--color-theme] duration-300"
+              >
+                Início
+              </Link>
+              <Link
+                href="/"
+                className="inline-flex items-center gap-2 text-[--color-white] hover:text-[--color-theme] duration-300"
+              >
+                Projetos
+              </Link>
+            </div>
           </SheetContent>
         </Sheet>
       </div>
